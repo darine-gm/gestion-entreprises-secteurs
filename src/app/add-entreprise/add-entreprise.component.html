@@ -1,0 +1,70 @@
+<div class="container">
+
+  <div>
+    <h2>Ajouter une Entreprise :</h2>
+  </div>
+
+  <form>
+
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label>ID Entreprise</label>
+
+      <input type="number"
+             [(ngModel)]="newEntreprise.idEntreprise"
+             name="idEntreprise"
+             class="form-control">
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Nom Entreprise</label>
+
+      <input type="text"
+             [(ngModel)]="newEntreprise.nomEntreprise"
+             name="nomEntreprise"
+             class="form-control">
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Adresse</label>
+
+      <input type="text"
+             [(ngModel)]="newEntreprise.adresse"
+             name="adresse"
+             class="form-control">
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Chiffre d'affaires</label>
+
+      <input type="number"
+             [(ngModel)]="newEntreprise.chiffreAffaires"
+             name="chiffreAffaires"
+             class="form-control">
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Date création</label>
+
+      <input type="date"
+             [(ngModel)]="newEntreprise.dateCreation"
+             name="dateCreation"
+             class="form-control">
+    </div>
+
+    <div class="mt-2">
+
+      <button type="submit"
+              (click)="addEntreprise()"
+              class="btn btn-success">
+        Ajouter
+      </button>
+
+      <div>
+        <h3>{{ message }}</h3>
+      </div>
+
+    </div>
+
+  </form>
+
+</div>
