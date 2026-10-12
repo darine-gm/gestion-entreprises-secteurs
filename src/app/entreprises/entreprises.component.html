@@ -1,7 +1,7 @@
 <div class="container"> 
   <div class="card shadow mb-4"> 
     <div class="card-body"> 
- 
+      <h2>Liste des Entreprises</h2>
       <table class="table table-striped"> 
  
         @if (entreprises.length != 0) { 
@@ -13,6 +13,7 @@
               <th>Adresse</th> 
               <th>Chiffre d'affaires</th> 
               <th>Date Création</th> 
+              <th>Secteur</th> 
               <th></th> 
               <th></th> 
             </tr> 
@@ -23,8 +24,8 @@
  
           @for (entreprise of entreprises; 
                 track entreprise.idEntreprise; 
-                let index = $index; 
-                let last = $last) { 
+                let index = $index;
+                ) { 
  
             <tr> 
               <td>{{ index + 1 }}</td> 
@@ -33,6 +34,7 @@
               <td>{{ entreprise.adresse }}</td> 
               <td>{{ entreprise.chiffreAffaires }}</td> 
               <td>{{ entreprise.dateCreation | date:'dd/MM/yyyy' }}</td> 
+              <td>{{entreprise.secteur?.nomSecteur}}</td>
  
               <td> 
                 <a class="btn btn-danger" 
@@ -48,6 +50,7 @@
                 </a> 
               </td> 
             </tr>
+            
 
             
           } 

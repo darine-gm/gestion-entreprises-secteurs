@@ -1,3 +1,5 @@
+import { Secteur } from "./secteur.models";
+
 export class Entreprise {
 
   idEntreprise!: number;
@@ -5,5 +7,5 @@ export class Entreprise {
   adresse!: string;
   dateCreation!: Date;
   chiffreAffaires!: number;
-
+  secteur! :Secteur;
 }
